@@ -135,7 +135,9 @@ const Home = () => {
               alignItems: 'center',
             }}>
             <View style={{alignItems: 'center'}}>
-              <Text style={{fontWeight: 'bold', fontSize: 22}}>Categories</Text>
+              <Text style={{fontWeight: 'bold', fontSize: 22, color: 'black'}}>
+                Categories
+              </Text>
 
               <FlatList
                 data={categories}
@@ -146,7 +148,7 @@ const Home = () => {
             </View>
           </View>
 
-          <View style={{height: height / 1.88, flex: 1}}>
+          <View style={{flex: 1}}>
             <FlatList
               data={food}
               numColumns={2}
