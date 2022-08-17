@@ -12,7 +12,10 @@ import {
 } from 'react-native';
 import Swiper from 'react-native-swiper';
 import imagePath from '../../constants/imagePath';
+import styles from './styles';
 const {width, height} = Dimensions.get('window');
+import Icon from 'react-native-vector-icons/Ionicons';
+
 const Home = () => {
   const [banner, setBanner] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -143,7 +146,7 @@ const Home = () => {
             </View>
           </View>
 
-          <View style={{height: height / 2.6, flex: 1}}>
+          <View style={{height: height / 1.88, flex: 1}}>
             <FlatList
               data={food}
               numColumns={2}
@@ -157,62 +160,4 @@ const Home = () => {
     </SafeAreaView>
   );
 };
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    backgroundColor: 'white',
-  },
-  imageBanner: {
-    height: width / 2,
-    width: width - 40,
-    borderRadius: 10,
-    marginHorizontal: 20,
-  },
-  logo: {
-    width: width / 2,
-    maxWidth: 180,
-    maxHeight: 50,
-  },
-
-  imageBanner: {
-    height: width / 2,
-    width: width - 40,
-    borderRadius: 10,
-    marginHorizontal: 20,
-  },
-  divCategorie: {
-    backgroundColor: 'red',
-    margin: 5,
-    alignItems: 'center',
-    borderRadius: 10,
-    padding: 10,
-  },
-  titleCatg: {
-    fontSize: 30,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    marginBottom: 10,
-  },
-  imageFood: {
-    width: width / 2 - 20 - 10,
-    height: width / 2 - 20 - 30,
-    backgroundColor: 'transparent',
-    position: 'absolute',
-    top: -45,
-  },
-  divFood: {
-    width: width / 2 - 20,
-    padding: 10,
-    borderRadius: 10,
-    marginTop: 55,
-    marginBottom: 5,
-    marginLeft: 10,
-    alignItems: 'center',
-    elevation: 8,
-    shadowOpacity: 0.3,
-    shadowRadius: 50,
-    backgroundColor: 'white',
-  },
-});
 export default Home;
